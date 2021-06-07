@@ -6,7 +6,7 @@
 
 
 
-      .. image:: logo.png
+.. image:: logo.png
 
 
 CATvehicle REU 2021 Installations
