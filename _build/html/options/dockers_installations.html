@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Dockers Installation &mdash; REU 2021 Installations  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="MATLAB Installation" href="matlab_installations.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> REU 2021 Installations
+          
+
+          
+            
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Main</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="catvehicle_installations.html">Catvehicle Simulator Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_installations.html">Python Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matlab_installations.html">MATLAB Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Dockers Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ubuntu-20-04">Ubuntu 20.04</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#windows-10">Windows 10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#macos">MacOS</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">REU 2021 Installations</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Dockers Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/options/dockers_installations.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dockers-installation">
+<h1>Dockers Installation<a class="headerlink" href="#dockers-installation" title="Permalink to this headline">¶</a></h1>
+<p>Before installing Dockers, create a <a class="reference external" href="https://hub.docker.com/signup">Docker Hub Account</a></p>
+<div class="section" id="ubuntu-20-04">
+<h2>Ubuntu 20.04<a class="headerlink" href="#ubuntu-20-04" title="Permalink to this headline">¶</a></h2>
+<p>You may also visit their official site <a class="reference external" href="https://docs.docker.com/engine/install/ubuntu/">Install Docker Engine on Ubuntu</a> for more details.</p>
+<dl>
+<dt>Set up the repository</dt><dd><p>Update the apt package index and install packages to allow apt to use a repository over HTTPS.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> \
+<span class="n">apt</span><span class="o">-</span><span class="n">transport</span><span class="o">-</span><span class="n">https</span> \
+<span class="n">ca</span><span class="o">-</span><span class="n">certificates</span> \
+<span class="n">curl</span> \
+<span class="n">gnupg</span> \
+<span class="n">lsb</span><span class="o">-</span><span class="n">release</span>
+</pre></div>
+</div>
+<p>Add Docker’s offical GPG key:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">fsSL</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">docker</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">linux</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span><span class="n">gpg</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">gpg</span> <span class="o">--</span><span class="n">dearmor</span> <span class="o">-</span><span class="n">o</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">keyrings</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="n">archive</span><span class="o">-</span><span class="n">keyring</span><span class="o">.</span><span class="n">gpg</span>
+</pre></div>
+</div>
+<p>Use the following command to set up the stable repository.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> \
+<span class="s2">&quot;deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu </span><span class="se">\</span>
+<span class="s2">$(lsb_release -cs) stable&quot;</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">docker</span><span class="o">.</span><span class="n">list</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">null</span>
+</pre></div>
+</div>
+</dd>
+<dt>Install Docker Engine</dt><dd><p>Update the apt package index, and install the latest version of Docker Engine and containerd, or go to the next step to install a specific version:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">docker</span><span class="o">-</span><span class="n">ce</span> <span class="n">docker</span><span class="o">-</span><span class="n">ce</span><span class="o">-</span><span class="n">cli</span> <span class="n">containerd</span><span class="o">.</span><span class="n">io</span>
+</pre></div>
+</div>
+<p>Add your username to a docker group and add the user to the docker group. This will be needed in order to run <code class="docutils literal notranslate"><span class="pre">Dockers</span></code> without having to type <code class="docutils literal notranslate"><span class="pre">sudo</span></code> every time at the beginning of a command.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sudo groupadd docker
+sudo usermod -aG docker $USER
+</pre></div>
+</div>
+</dd>
+</dl>
+<p><strong>Close your current terminal and open a new one.</strong></p>
+<blockquote>
+<div><p>Verify that Docker Engine is installed correctly by running the hello-world image.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="n">hello</span><span class="o">-</span><span class="n">world</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you still get a <code class="docutils literal notranslate"><span class="pre">permission</span> <span class="pre">denied</span></code> error , use the following command to activate the changes to the group.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">newgrp</span> <span class="n">docker</span>
+</pre></div>
+</div>
+</div>
+<p>Verify that the image is up and running</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">images</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="windows-10">
+<h2>Windows 10<a class="headerlink" href="#windows-10" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Download installer from <a class="reference external" href="https://docs.docker.com/docker-for-windows/install/">Install Docker Desktop on Windows</a></p></li>
+<li><p>Open and click <code class="docutils literal notranslate"><span class="pre">ok</span></code> on the configuation window to install Docker Desktop.</p></li>
+<li><p>Once all the packages have upacked, click on <code class="docutils literal notranslate"><span class="pre">Close</span> <span class="pre">and</span> <span class="pre">restart</span></code>. This will restart your computer.</p></li>
+</ol>
+<p>4. Verify that Docker Engine is installed correctly by running the hello-world image, open a <code class="docutils literal notranslate"><span class="pre">command</span> <span class="pre">prompt</span></code> window and run</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="n">hello</span><span class="o">-</span><span class="n">world</span>
+</pre></div>
+</div>
+<p>5. To verify the image is up and running</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">images</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="macos">
+<h2>MacOS<a class="headerlink" href="#macos" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Download installer from <a class="reference external" href="https://docs.docker.com/docker-for-mac/install/">Install Docker Desktop on Mac</a></p></li>
+<li><p>Open the installer once downloaded and drag the icon to the applications folder as prompted. This will take several minutes.</p></li>
+<li><p>On the other pop-up click on <code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">Docker</span></code>.</p></li>
+<li><p>A Verifying “Docker”… pop-up will take several minutes.</p></li>
+<li><p>Go to your applications and open <code class="docutils literal notranslate"><span class="pre">Docker</span></code>.</p></li>
+<li><p>You will get a message that states the app has been downloaded from the internet. Select <code class="docutils literal notranslate"><span class="pre">open</span></code>.</p></li>
+<li><p>Give Docker Destop priviledged access (It will ask for your password).</p></li>
+<li><p>Give it a few minutes for the Docker Engine to Initiate. On your status bar you will see the Docker icon initiating.</p></li>
+<li><p>You will see a “No containers running” message.</p></li>
+<li><p>Click on the copy icon to copy the code and run it on a terminal window. It should look something like this.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">p</span> <span class="mi">80</span><span class="p">:</span><span class="mi">80</span> <span class="n">docker</span><span class="o">/</span><span class="n">getting</span><span class="o">-</span><span class="n">started</span>
+</pre></div>
+</div>
+</li>
+<li><p>Return to the Docker Desktop Engine and you will see that there is a container.</p></li>
+<li><p>Verify that the Docker Engine is installed correctly on your terminal run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="n">hello</span><span class="o">-</span><span class="n">world</span>
+</pre></div>
+</div>
+</li>
+<li><p>To verify the image is up and running</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">images</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="matlab_installations.html" class="btn btn-neutral float-left" title="MATLAB Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Arminda Estrada &amp; Safwan Elmadani.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
