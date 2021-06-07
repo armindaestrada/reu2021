@@ -28,6 +28,7 @@ You may skip the catvehicle installation if you will not be working with the sim
    options/python_installations
    options/matlab_installations
    options/dockers_installations
+   options/cyverse_installations
       
 .. toctree::
    :caption: API
